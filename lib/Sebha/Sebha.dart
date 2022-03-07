@@ -18,6 +18,9 @@ class _SebhaScreenState extends State<SebhaScreen> {
         child: Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            SizedBox(
+              height: 25,
+            ),
             Stack(
               alignment: Alignment.topCenter,
               children: [
@@ -46,6 +49,7 @@ class _SebhaScreenState extends State<SebhaScreen> {
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
+                  color: MyThemeData.accentColor.withOpacity(0.5),
                 ),
                 ),
               ) ,
@@ -112,10 +116,9 @@ class _SebhaScreenState extends State<SebhaScreen> {
     }
     else if(currentIndex ==99){
       SebhaNames = "لا اله الا الله" ;
+      currentIndex=-1;
       return SebhaNames;
     }
-    else if(currentIndex ==100){
-      currentIndex=-1;
-    }
+
   }
 }
