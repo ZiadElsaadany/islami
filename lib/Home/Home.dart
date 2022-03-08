@@ -63,7 +63,85 @@ class _HomeState extends State<Home> {
           ),
         ),
         body: gitBody(),
-      ),
+           drawer: Drawer(
+             child: Container(
+               decoration: BoxDecoration(
+                 color: Colors.black
+               ),
+               child: Column(
+                 mainAxisAlignment: MainAxisAlignment.center,
+                 children: [
+                   Container  (
+                     margin: EdgeInsets.all(20),
+                     width: double.infinity,
+                     child: ElevatedButton(
+                         style: ButtonStyle(
+                           backgroundColor: MaterialStateProperty.all(MyThemeData.primaryColor),
+                           padding: MaterialStateProperty.all(EdgeInsets.all(10)),
+                           shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                             borderRadius: BorderRadius.circular(10),
+                           ))
+                         ),
+                         onPressed: (){}, child: Text("الأذكار" , style: TextStyle(
+                       fontSize: 25,
+                       fontWeight: FontWeight.bold,
+                     ),)),
+                   ),
+                   Container  (
+                     margin: EdgeInsets.all(20),
+                     width: double.infinity,
+                     child: ElevatedButton(
+                         style: ButtonStyle(
+                           backgroundColor: MaterialStateProperty.all(MyThemeData.primaryColor),
+                           padding: MaterialStateProperty.all(EdgeInsets.all(10)),
+                           shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                             borderRadius: BorderRadius.circular(10),
+                           ))
+                         ),
+                         onPressed: (){}, child: Text("الأذكار" , style: TextStyle(
+                       fontSize: 25,
+                       fontWeight: FontWeight.bold,
+                     ),)),
+                   ),
+                   Container  (
+                     margin: EdgeInsets.all(20),
+                     width: double.infinity,
+                     child: ElevatedButton(
+                         style: ButtonStyle(
+                           backgroundColor: MaterialStateProperty.all(MyThemeData.primaryColor),
+                           padding: MaterialStateProperty.all(EdgeInsets.all(10)),
+                           shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                             borderRadius: BorderRadius.circular(10),
+                           ))
+                         ),
+                         onPressed: (){}, child: Text("الأذكار" , style: TextStyle(
+                       fontSize: 25,
+                       fontWeight: FontWeight.bold,
+                     ),)),
+                   ),
+                   Container  (
+                     margin: EdgeInsets.all(20),
+                     width: double.infinity,
+                     child: ElevatedButton(
+                         style: ButtonStyle(
+                           backgroundColor: MaterialStateProperty.all(MyThemeData.primaryColor),
+                           padding: MaterialStateProperty.all(EdgeInsets.all(10)),
+                           shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                             borderRadius: BorderRadius.circular(10),
+                           ))
+                         ),
+                         onPressed: (){}, child: Text("الأذكار" , style: TextStyle(
+                       fontSize: 25,
+                       fontWeight: FontWeight.bold,
+                     ),)),
+                   ),
+                 ],
+               ),
+
+               ),
+             ),
+           ),
+
     );
   }
   Widget ? gitBody() {
