@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:islami/azkar/Azkar.dart';
 import 'Home/Home.dart';
 
 void main() {
@@ -13,8 +13,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        Home.routeName: (context)=>Home(),
-
+        Home.routeName: (context) => Home(),
+        Azkar.routeName:(context)=>Azkar(),
       },
       initialRoute: Home.routeName,
     );

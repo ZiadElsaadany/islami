@@ -5,9 +5,10 @@ import 'package:islami/MyThemeData.dart';
 import 'package:islami/Quran/Quran.dart';
 import 'package:islami/Radio/Radio.dart';
 import 'package:islami/Sebha/Sebha.dart';
+import 'package:islami/azkar/Azkar.dart';
 
 class Home extends StatefulWidget {
-  static const String routeName= "home" ;
+  static  String routeName= "home" ;
 
   @override
   _HomeState createState() => _HomeState();
@@ -63,7 +64,7 @@ class _HomeState extends State<Home> {
           ),
         ),
         body: gitBody(),
-           drawer: Drawer(
+        drawer: Drawer(
              child: Container(
                decoration: BoxDecoration(
                  color: Colors.black
@@ -76,13 +77,15 @@ class _HomeState extends State<Home> {
                      width: double.infinity,
                      child: ElevatedButton(
                          style: ButtonStyle(
-                           backgroundColor: MaterialStateProperty.all(MyThemeData.primaryColor),
-                           padding: MaterialStateProperty.all(EdgeInsets.all(10)),
-                           shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                             borderRadius: BorderRadius.circular(10),
-                           ))
+                             backgroundColor: MaterialStateProperty.all(MyThemeData.primaryColor),
+                             padding: MaterialStateProperty.all(EdgeInsets.all(10)),
+                             shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                               borderRadius: BorderRadius.circular(10),
+                             ))
                          ),
-                         onPressed: (){}, child: Text("الأذكار" , style: TextStyle(
+                         onPressed: (){
+                           Navigator.of(context).pushNamed(Azkar.routeName);
+                         }, child: Text("الأذكار" , style: TextStyle(
                        fontSize: 25,
                        fontWeight: FontWeight.bold,
                      ),)),
