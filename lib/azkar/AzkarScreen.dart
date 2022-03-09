@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami/MyThemeData.dart';
+import 'package:islami/azkar/azkarmasaa/AzkarMasaa.dart';
 import 'package:islami/azkar/azkarsabah/Azkar.dart';
 
 class AzkarScreen extends StatelessWidget {
@@ -40,7 +41,7 @@ class AzkarScreen extends StatelessWidget {
               ),
               ElevatedButton(
                   onPressed: (){
-                Navigator.of(context).pushNamed(Azkar.routeName);
+                Navigator.of(context).pushNamed(AzkaMsaa.routeName);
               },
                   child: Text("أذكار المساء", style: TextStyle(
                     fontSize: 25,

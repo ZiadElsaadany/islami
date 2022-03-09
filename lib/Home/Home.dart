@@ -6,7 +6,7 @@ import 'package:islami/Quran/Quran.dart';
 import 'package:islami/Radio/Radio.dart';
 import 'package:islami/Sebha/Sebha.dart';
 import 'package:islami/azkar/azkarsabah/Azkar.dart';
-import 'package:islami/azkar/azkarsabah/AzkarScreen.dart';
+import 'package:islami/azkar/AzkarScreen.dart';
 
 class Home extends StatefulWidget {
   static  String routeName= "home" ;
@@ -82,7 +82,9 @@ class _HomeState extends State<Home> {
                              padding: MaterialStateProperty.all(EdgeInsets.all(10)),
                              shape: MaterialStateProperty.all(RoundedRectangleBorder(
                                borderRadius: BorderRadius.circular(10),
-                             ))
+                             )),
+                           shadowColor: MaterialStateProperty.all(Colors.black),
+                           elevation: MaterialStateProperty.all(10),
                          ),
                          onPressed: (){
                            Navigator.of(context).pushNamed(AzkarScreen.routeName);

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../MyThemeData.dart';
+import '../MyThemeData.dart';
 
 class Part extends StatefulWidget {
   Color colors;

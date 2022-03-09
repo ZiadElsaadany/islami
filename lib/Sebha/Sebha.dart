@@ -44,7 +44,6 @@ class _SebhaScreenState extends State<SebhaScreen> {
             children: [
               Container(
                 margin: EdgeInsets.only(top: 20),
-
                 child: Text("عدد التسبيحات",
                 style: TextStyle(
                   fontSize: 25,
