@@ -5,7 +5,8 @@ import 'package:islami/MyThemeData.dart';
 import 'package:islami/Quran/Quran.dart';
 import 'package:islami/Radio/Radio.dart';
 import 'package:islami/Sebha/Sebha.dart';
-import 'package:islami/azkar/Azkar.dart';
+import 'package:islami/azkar/azkarsabah/Azkar.dart';
+import 'package:islami/azkar/azkarsabah/AzkarScreen.dart';
 
 class Home extends StatefulWidget {
   static  String routeName= "home" ;
@@ -67,7 +68,7 @@ class _HomeState extends State<Home> {
         drawer: Drawer(
              child: Container(
                decoration: BoxDecoration(
-                 color: Colors.black
+                 color: MyThemeData.accentColor
                ),
                child: Column(
                  mainAxisAlignment: MainAxisAlignment.center,
@@ -84,60 +85,13 @@ class _HomeState extends State<Home> {
                              ))
                          ),
                          onPressed: (){
-                           Navigator.of(context).pushNamed(Azkar.routeName);
+                           Navigator.of(context).pushNamed(AzkarScreen.routeName);
                          }, child: Text("الأذكار" , style: TextStyle(
                        fontSize: 25,
                        fontWeight: FontWeight.bold,
                      ),)),
                    ),
-                   Container  (
-                     margin: EdgeInsets.all(20),
-                     width: double.infinity,
-                     child: ElevatedButton(
-                         style: ButtonStyle(
-                           backgroundColor: MaterialStateProperty.all(MyThemeData.primaryColor),
-                           padding: MaterialStateProperty.all(EdgeInsets.all(10)),
-                           shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                             borderRadius: BorderRadius.circular(10),
-                           ))
-                         ),
-                         onPressed: (){}, child: Text("الأذكار" , style: TextStyle(
-                       fontSize: 25,
-                       fontWeight: FontWeight.bold,
-                     ),)),
-                   ),
-                   Container  (
-                     margin: EdgeInsets.all(20),
-                     width: double.infinity,
-                     child: ElevatedButton(
-                         style: ButtonStyle(
-                           backgroundColor: MaterialStateProperty.all(MyThemeData.primaryColor),
-                           padding: MaterialStateProperty.all(EdgeInsets.all(10)),
-                           shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                             borderRadius: BorderRadius.circular(10),
-                           ))
-                         ),
-                         onPressed: (){}, child: Text("الأذكار" , style: TextStyle(
-                       fontSize: 25,
-                       fontWeight: FontWeight.bold,
-                     ),)),
-                   ),
-                   Container  (
-                     margin: EdgeInsets.all(20),
-                     width: double.infinity,
-                     child: ElevatedButton(
-                         style: ButtonStyle(
-                           backgroundColor: MaterialStateProperty.all(MyThemeData.primaryColor),
-                           padding: MaterialStateProperty.all(EdgeInsets.all(10)),
-                           shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                             borderRadius: BorderRadius.circular(10),
-                           ))
-                         ),
-                         onPressed: (){}, child: Text("الأذكار" , style: TextStyle(
-                       fontSize: 25,
-                       fontWeight: FontWeight.bold,
-                     ),)),
-                   ),
+
                  ],
                ),
 
