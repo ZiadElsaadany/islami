@@ -8,9 +8,10 @@ class SebhaScreen extends StatefulWidget {
 }
 
 class _SebhaScreenState extends State<SebhaScreen> {
-  int currentIndex= 0 ;
-  String ? SebhaNames;
-
+  int counter = 0 ;
+  int index =0 ;
+  List<String> tasbehList=['سبحان الله','الحمدلله','الله أكبر','لا اله الا الله','لا حول ولا قوةالا بالله'] ;
+   double angle =0;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -25,19 +26,23 @@ class _SebhaScreenState extends State<SebhaScreen> {
               alignment: Alignment.topCenter,
               children: [
                 Container(
-                  padding: EdgeInsets.only(top: 70),
-                  child: GestureDetector(
-                      onTap: (){
-                        currentIndex++;
-                        setState(() {});
-                      } ,
-                      child: Image(image: AssetImage("assets/images/body_sebha_logo.png"))),
-                ),
-                Container(
                   child: Image(
                     image: AssetImage("assets/images/head_sebha_logo.png"),
                   ),
                 ),
+                Container(
+                  padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.09),
+                  child: GestureDetector(
+                      onTap: (){
+                        angle+=15;
+                        sebhaName();
+                        setState(() {});
+                      } ,
+                      child: Transform.rotate(
+                        angle: angle,
+                          child: Image(image: AssetImage("assets/images/body_sebha_logo.png")))),
+                ),
+
               ],
             ),
             Column(
@@ -52,27 +57,28 @@ class _SebhaScreenState extends State<SebhaScreen> {
                 ),
                 ),
               ) ,
+              SizedBox(height: 20,),
               Container(
-                margin: EdgeInsets.symmetric(vertical: 20),
                 padding: EdgeInsets.all(20),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
+                  borderRadius: BorderRadius.circular(20),
                   color: MyThemeData.primaryColor.withOpacity(0.5),
                 ),
-                child: Text("$currentIndex",
+                child: Text("$counter",
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
                 ),
                 ),
               ),
+              SizedBox(height: 20,),
               Container(
-                padding: EdgeInsets.all(5),
+                padding: EdgeInsets.symmetric(horizontal: 10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25),
                   color: MyThemeData.primaryColor,
                 ),
-                child: Text("${sebhaName()} ",
+                child: Text("${tasbehList[index]} ",
                   style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
@@ -80,9 +86,11 @@ class _SebhaScreenState extends State<SebhaScreen> {
                   ),
                 ),
               ),
+              SizedBox(height: 10,),
               ElevatedButton(
                 onPressed: (){
-                currentIndex = 0;
+                counter= 0 ;
+                index=0;
                 setState(() {});
               },
                 child: Icon(Icons.settings_backup_restore,
@@ -100,24 +108,14 @@ class _SebhaScreenState extends State<SebhaScreen> {
       ),
     );
   }
-  String ? sebhaName(){
-    if(currentIndex==0  || currentIndex <33 ){
-    SebhaNames = "سبحان الله" ;
-    return SebhaNames;
-    }
-    else if(currentIndex >=33&&currentIndex < 66  ){
-    SebhaNames = "الحمدلله" ;
-    return SebhaNames;
-    }
-    else if(currentIndex >=66 && currentIndex <99){
-      SebhaNames = "الله اكبر" ;
-      return SebhaNames;
-    }
-    else if(currentIndex ==99){
-      SebhaNames = "لا اله الا الله" ;
-      currentIndex=-1;
-      return SebhaNames;
-    }
-
+  void sebhaName(){
+     counter ++ ;
+     if(counter %33== 0){
+       index++ ;
+     }
+     if(counter%165== 0){
+       index= 0 ;
+     }
+     setState(() { });
   }
 }

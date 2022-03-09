@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami/azkar/azkarmasaa/AzkarMasaa.dart';
+import 'package:islami/azkar/azkarnoom/AzkarNoom.dart';
 import 'package:islami/azkar/azkarsabah/Azkar.dart';
 import 'package:islami/azkar/AzkarScreen.dart';
 import 'Home/Home.dart';
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
         Azkar.routeName:(context)=>Azkar(),
         AzkarScreen.routeName:(context)=>AzkarScreen(),
         AzkaMsaa.routeName:(context)=>AzkaMsaa(),
+        AzkarNoom.routeName:(context)=>AzkarNoom(),
 
       },
       initialRoute: Home.routeName,

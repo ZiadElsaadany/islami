@@ -47,13 +47,16 @@ class PartText extends StatelessWidget {
   PartText(this.azkarName);
   @override
   Widget build(BuildContext context) {
-    return Text(
-      azkarName,
-      textAlign: TextAlign.end,
-      style: TextStyle(
-          color: Colors.white ,
-          fontSize: 25.0
-      ),);
+    return Container(
+    padding: EdgeInsets.all(10),
+      child: Text(
+        azkarName,
+        textAlign: TextAlign.end,
+        style: TextStyle(
+            color: Colors.white ,
+            fontSize: 25.0
+        ),),
+    );
   }
 }
 class Part2Text extends StatelessWidget {
